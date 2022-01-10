@@ -2,12 +2,16 @@
 import React from "react";
 import "../styles/About.css";
 import aboutImg from "../img/about.jpg";
+import { saveAs } from "file-saver";
 function About() {
 
   window.addEventListener("scroll", function () {
     const upToTop = document.querySelector("a.bottom__to__top");
     upToTop.classList.toggle("active", window.scrollY > 0)
   });
+  const saveFile = () => {
+    saveAs();
+  };
   return (
     <div className="about component__space" id="About">
       <div className="container">
@@ -19,26 +23,25 @@ function About() {
             <h1 className="about__heading">About Me</h1>
             <div className="about__meta">
               <p className="about__text p__color">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered in some form, by injected humour,
-                or randomised words which dont look even slightly believable. If
-                you are going to use a passage of Lorem Ipsum,
+              In 2021, I graduated with a Masters degree in Computer Science from Guru Gobind Singh Indraprastha University. 
+              Then, In 2018, I graduated with a Bachelor's degree in Computer Science from Lovely Professional University.
+              As a teenager at school, I was the kid other students approached about issues with their phones or laptop. 
+              I was the go-to-guy for fixing resolving any technical issues.
               </p>
               <p className="about__text p__color">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered in some form, by injected humour,
-                or randomised words which dont look even slightly believable. If
-                you are going to use a passage of Lorem Ipsum,
+              Today, not much has changed. I'm still the first person to be called for any technical issues. 
+              The difference is now I can also develop innovative applications and software.
+              My natural curiosity for computers is what drove me towards my computer science degree.
+              I have always been fascinated by computers and the technical mechanics behind the monitor.
+
               </p>
               <p className="about__text p__color">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered in some form, by injected humour,
               </p>
               <div className="about__button d__flex align__items__center">
-                <a href="#">
+                <a href="#" onClick={saveFile}>
                   <button className="about btn pointer">Download CV</button>
                 </a>
-                <a href="#">
+                <a href="#Contact">
                   <button className="about btn pointer">Hire Me</button>
                 </a>
               </div>
